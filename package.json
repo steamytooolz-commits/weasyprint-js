@@ -44,7 +44,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "tsc --noEmit",
-    "prepare": "npm run build",
+    "prepare": "npm run build || echo \"prepare: TypeScript build unavailable, using prebuilt dist/\"",
     "prepublishOnly": "npm run build",
     "cli": "tsx src/bin/weasyprint.ts"
   },

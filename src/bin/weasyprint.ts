@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // CLI — mirrors weasyprint/__main__.py
 // `weasyprint-js input.html output.pdf [options]`
 import { Command } from 'commander';
