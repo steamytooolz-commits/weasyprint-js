@@ -1,0 +1,67 @@
+{
+  "name": "weasyprint-js",
+  "version": "0.1.0",
+  "description": "The Awesome Document Factory for Node.js — HTML+CSS to PDF, ported from Python WeasyPrint (v70.0) to pure TypeScript",
+  "keywords": [
+    "html",
+    "css",
+    "pdf",
+    "converter",
+    "weasyprint",
+    "htmltopdf",
+    "print"
+  ],
+  "homepage": "https://github.com/steamytooolz-commits/weasyprint-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steamytooolz-commits/weasyprint-js.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Simon Sapin (original Python), ported to JS",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "weasyprint-js": "./dist/bin/weasyprint.js",
+    "weasyprintjs": "./dist/bin/weasyprint.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "assets"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "cli": "tsx src/bin/weasyprint.ts"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "css-tree": "^3.1.0",
+    "parse5": "^7.3.0",
+    "pdf-lib": "^1.17.1",
+    "undici": "^7.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
